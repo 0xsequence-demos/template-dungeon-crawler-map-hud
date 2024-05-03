@@ -22,12 +22,6 @@ jobs:
         uses: pnpm/action-setup@v3 
         with:
           version: 8
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build webpack
-        run: pnpm run build
       - name: Setup Pages
         uses: actions/setup-node@v2
         with:
