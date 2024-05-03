@@ -1,0 +1,76 @@
+.App {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+.square {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  opacity: 0;
+}
+
+.square.visible {
+  opacity: 1;
+  transition: opacity linear 1s; /* Adjust the transition duration as needed */
+}
+
+.square.hidden {
+  opacity: 0;
+  transition: opacity linear 2s; /* Adjust the transition duration as needed */
+}
+
+.mini-map {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 180px;
+  flex-direction: column;
+  border: 2px solid grey; /* Grey border around the mini-map */
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  /* border: 1px solid #000; */
+  position: relative; /* Needed for absolute positioning inside */
+}
+
+.cell.obstacle {
+  background-color: #333; /* Obstacle color */
+}
+
+.color-marker {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.player-marker {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg); /* Adjust rotation based on player orientation */
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Triangle shape */
+  background-color: #A020F0; /* Default color for the player marker */
+}
+
+.hover-area:hover .hover-content {
+  display: block; /* Show the content when hovering over the hover-area */
+}
